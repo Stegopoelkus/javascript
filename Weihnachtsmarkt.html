@@ -8,32 +8,34 @@
 	<div>
 		<table>
 			<tr>
-				<td><div id="Gl&uuml;wein" class="bude" onmouseover=gross("#Gl&uuml;wein") onmouseout=klein('#Gl&uuml;wein')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="Stollen" class="bude" onmouseover=gross('#Stollen') onmouseout=klein('#Stollen') style="z-index: 2;"><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="Pl&auml;tzchen" class="bude" onmouseover=gross('#Pl&auml;tzchen') onmouseout=klein('#Pl&auml;tzchen')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200" style="z-index: 2;"></div></td>
-				<td><div id="Kakao" class="bude" onmouseover=gross('#Kakao') onmouseout=klein('#Kakao')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Gl&uuml;wein" class="bude" onmouseover=gross("Gl&uuml;wein") onmouseout=klein('Gl&uuml;wein')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Stollen" class="bude" onmouseover=gross('Stollen') onmouseout=klein('Stollen') style="z-index: 2;"><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Pl&auml;tzchen" class="bude" onmouseover=gross('Pl&auml;tzchen') onmouseout=klein('Pl&auml;tzchen')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200" style="z-index: 2;"></div></td>
+				<td><div id="Kakao" class="bude" onmouseover=gross('Kakao') onmouseout=klein('Kakao')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
 			</tr>
 			<tr>
-				<td><div id="Kuchen" class="bude" onmouseover=gross('#Kuchen') onmouseout=klein('#Kuchen')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Kuchen" class="bude" onmouseover=gross('Kuchen') onmouseout=klein('Kuchen')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
 				<td colspan="2"><div class="baum"><img src="Weihnachtsbaum.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="Schmuck" class="bude" onmouseover=gross('#Schmuck') onmouseout=klein('#Schmuck')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Schmuck" class="bude" onmouseover=gross('Schmuck') onmouseout=klein('Schmuck')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
 			</tr>
 			<tr>
-				<td><div id="Bratwurst" class="bude" onmouseover=gross('#Bratwurst') onmouseout=klein('#Bratwurst')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="Punsch" class="bude" onmouseover=gross('#Punsch') onmouseout=klein('#Punsch')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="Honig" class="bude" onmouseover=gross('#Honig') onmouseout=klein('#Honig')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
-				<td><div id="" class="bude" onmouseover="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ')"><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Bratwurst" class="bude" onmouseover=gross('Bratwurst') onmouseout=klein('Bratwurst')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Punsch" class="bude" onmouseover=gross('Punsch') onmouseout=klein('Punsch')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Honig" class="bude" onmouseover=gross('Honig') onmouseout=klein('Honig')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
+				<td><div id="Honi" class="bude" onmouseover=gross('Honi') onmouseout=klein('Honi')><img src="Bude.jpg" title=”Bild_1” alt="Ersatztext" width="200" height="200"></div></td>
 			</tr>
 		</table>
 	</div>
 	<script>
 		function gross(id) {
-			document.querySelector(id).firstChild.height='400'
-			document.querySelector(id).firstChild.width='400'
+			document.querySelector('#'+id+'').firstChild.height='400'
+			document.querySelector('#'+id+'').firstChild.width='400'
+			document.querySelector('#'+id+'').style='z-index:-1'
 		}
 		function klein(id) {
-			document.querySelector(id).firstChild.width='200'
-			document.querySelector(id).firstChild.height='200'
+			document.querySelector('#'+id+'').firstChild.width='200'
+			document.querySelector('#'+id+'').firstChild.height='200'
+			document.querySelector('#'+id+'').style='z-index:1'
 		}
 	</script>
 	</body>

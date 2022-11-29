@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Java</title>
+	</head>
+	<body>
+		<div style="max-width: 800px;margin:auto;">
+			<iframe id="slideshow" height="800px" width="800px"></iframe>
+			<a id="link" onclick="window.open(link)" style="color: #0000FF;text-decoration: underline;"> </a>
+		</div>
+		<table id="temp"></table>
+		<script>
+			setTimeout(slide,6000)
+			var i=0
+			function slide(){
+				var locations=["https://de.wikipedia.org/wiki/Wikipedia:Hauptseite","https://de.wikipedia.org/wiki/Portal:Geographie","https://de.wikipedia.org/wiki/Portal:Geschichte","https://de.wikipedia.org/wiki/Portal:Gesellschaft"];
+				document.querySelector("#slideshow").src = locations[i];
+				link = locations[i]
+				document.querySelector("#link").innerHTML = link
+				if (i >= 3) {
+					i=0;
+				}
+				else {
+					i+=1;
+				}
+				setTimeout(slide,6000)
+			}
+
+		</script>
+	</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Java</title>
+	</head>
+	<body>
+		<input id="inp" type="text" onkeyup="this.size=this.value.length">
+		<button onclick="alarm()">Klick</button>
+		<textarea name="" id="" cols="30" rows="10"></textarea>
+		<script>
+			function alarm(){
+				var inp=document.querySelector("#inp");
+				window.open(inp.value);
+			}
+		</script>
+	</body>
+</html>

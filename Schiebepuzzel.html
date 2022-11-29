@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Java</title>
+		<link rel="stylesheet" type="text/css" href="Schiebepuzzle.css" />
+	</head>
+	<body>
+		<table>
+			<tr>
+				<td id="a" onclick="move(1)"></td>
+				<td id="b" onclick="move(2)"><div>2</div></td>
+				<td id="c" onclick="move(3)">3</td>
+			</tr>
+			<tr>
+				<td id="d" onclick="move(4)">4</td>
+				<td id="e" onclick="move(5)">5</td>
+				<td id="f" onclick="move(6)">6</td>
+			</tr>
+			<tr>
+				<td id="g" onclick="move(7)">7</td>
+				<td id="h" onclick="move(8)">8</td>
+				<td id="i" onclick="move(9)"></td>
+			</tr>
+		</table>
+	<script>
+		function move(index){
+	
+			document.querySelector("#"+String.fromCharCode(index+96)+"").innerHTML="<p>"+document.querySelector("#b").innerHTML+"</p>"
+	}
+	</script>
+	</body>
+</html>
